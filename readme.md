@@ -1,7 +1,13 @@
 WebGL Heatmap
 =============
 
-webgl-heatmap.js is a JavaScript library for high performance heatmap display.
+This is a fork of [Florian Boesch](https://github.com/pyalot)'s excellent WebGL
+Heatmap to support CommonJS and and to make it available from NPM. To install
+it run:
+
+    npm install webgl-heatmap
+
+webgl-heatmap is a JavaScript library for high performance heatmap display.
 
 Demo
 ----
@@ -21,7 +27,7 @@ Instantiate a new heatmap, errors can be one of:
 
 ```javascript
 try{
-    var heatmap = createWebGLHeatmap({canvas: yourCanvas});
+    var heatmap = new WebGLHeatmap({canvas: yourCanvas});
 }
 catch(error){
     // handle the error
@@ -85,14 +91,3 @@ Blur all values a little:
 ```javascript
 heatmap.blur()
 ```
-
-License
--------
-
-Copyright (c) 2013, Florian Boesch <pyalot@gmail.com> http://codeflow.org/
-
-WebGL Heatmap is licensed under any of the following licenses at your choosing:
-
- * MIT: see mit-license
- * GPL: see gplv*-license
- * BSD: see bsd-license
