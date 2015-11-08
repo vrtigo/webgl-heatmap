@@ -3,7 +3,7 @@
 var WebGLHeatmap = require('../index');
 var fs = require('fs');
 
-window.onload = function() {
+window.onload = function onload() {
     var canvas = document.createElement('canvas');
     canvas.style.width = '100%';
     canvas.style.height = '100%';
@@ -25,7 +25,7 @@ window.onload = function() {
 
     document.body.appendChild(heatmap.canvas);
 
-    var paintAtCoord = function(x, y){
+    var paintAtCoord = function paintAtCoord(x, y) {
         var count = 0;
         while(count < 200){
             var xoff = Math.random()*2-1;
