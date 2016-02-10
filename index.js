@@ -2,9 +2,8 @@
 
 var WebGLHeatmap = require('./webgl-heatmap');
 var HeatmapTexture = require('./heatmap-texture');
-var glslify = require('glslify');
-var vertexShaderBlit = glslify('./vertex-shader-blit.glsl');
-var fragmentShaderBlit = glslify('./fragment-shader-blit.glsl');
+var vertexShaderBlit = require('./vertex-shader-blit.glsl');
+var fragmentShaderBlit = require('./fragment-shader-blit.glsl');
 
 var __indexOf = [].indexOf || function(item) {
   for (var i = 0, l = this.length; i < l; i++) {

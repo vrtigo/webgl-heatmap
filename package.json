@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "budo ./example/main.js --live -- -t glslify -t brfs | bistre"
+    "start": "budo ./example/main.js --live | bistre"
   },
   "repository": {
     "type": "git",
@@ -19,19 +19,21 @@
   "author": "Victor Powell <vicapow@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "global": "^4.3.0",
-    "glslify": "^2.3.1"
+    "browserify-shader": "^0.1.2",
+    "global": "^4.3.0"
   },
   "browserify": {
     "transform": [
-      "brfs",
-      "glslify"
+      ["browserify-shader", {
+        "parameterize": false
+      }],
+      "brfs"
     ]
   },
   "peerDependencies": {},
   "devDependencies": {
     "bistre": "^1.0.1",
     "brfs": "^1.4.1",
-    "budo": "^6.0.1"
+    "budo": "^8.0.4"
   }
 }
