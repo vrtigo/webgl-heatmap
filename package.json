@@ -1,6 +1,6 @@
 {
   "name": "webgl-heatmap",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A commonJS compatible version of pyalot's webgl-heatmap",
   "main": "index.js",
   "scripts": {
@@ -24,9 +24,12 @@
   },
   "browserify": {
     "transform": [
-      ["browserify-shader", {
-        "parameterize": false
-      }],
+      [
+        "browserify-shader",
+        {
+          "parameterize": false
+        }
+      ],
       "brfs"
     ]
   },
