@@ -1,9 +1,8 @@
 'use strict';
 
 var HeatmapShader = require('./heatmap-shader');
-var glslify = require('glslify');
-var vertexShaderBlit = glslify('./vertex-shader-blit.glsl');
-var fragmentShaderBlit = glslify('./fragment-shader-blit.glsl');
+var vertexShaderBlit = require('./vertex-shader-blit.glsl');
+var fragmentShaderBlit = require('./fragment-shader-blit.glsl');
 var HeatmapNode = require('./heatmap-node');
 
 function HeatmapHeights(heatmap, gl, width, height) {

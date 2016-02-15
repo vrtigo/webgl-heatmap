@@ -2,9 +2,8 @@
 
 var document = require('global/document');
 var window = require('global/window');
-var glslify = require('glslify');
-var vertexShaderBlit = glslify('./vertex-shader-blit.glsl');
-var fragmentShaderBlit = glslify('./fragment-shader-blit.glsl');
+var vertexShaderBlit = require('./vertex-shader-blit.glsl');
+var fragmentShaderBlit = require('./fragment-shader-blit.glsl');
 var HeatmapTexture = require('./heatmap-texture');
 var HeatmapHeights = require('./heatmap-heights');
 var HeatmapShader = require('./heatmap-shader');
