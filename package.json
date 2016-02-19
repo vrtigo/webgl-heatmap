@@ -19,18 +19,11 @@
   "author": "Victor Powell <vicapow@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "browserify-shader": "^0.1.2",
     "brfs": "^1.4.1",
     "global": "^4.3.0"
   },
   "browserify": {
     "transform": [
-      [
-        "browserify-shader",
-        {
-          "parameterize": false
-        }
-      ],
       "brfs"
     ]
   },

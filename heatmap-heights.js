@@ -1,8 +1,12 @@
 'use strict';
 
 var HeatmapShader = require('./heatmap-shader');
-var vertexShaderBlit = require('./vertex-shader-blit.glsl');
-var fragmentShaderBlit = require('./fragment-shader-blit.glsl');
+var fs = require('fs');
+var path = require('path');
+/* eslint-disable max-len */
+var vertexShaderBlit = fs.readFileSync(path.join(__dirname, './vertex-shader-blit.glsl'), 'utf-8');
+var fragmentShaderBlit = fs.readFileSync(path.join(__dirname, './fragment-shader-blit.glsl'), 'utf-8');
+/* eslint-enable max-len */
 var HeatmapNode = require('./heatmap-node');
 
 function HeatmapHeights(heatmap, gl, width, height) {

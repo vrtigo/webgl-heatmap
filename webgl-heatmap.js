@@ -2,8 +2,12 @@
 
 var document = require('global/document');
 var window = require('global/window');
-var vertexShaderBlit = require('./vertex-shader-blit.glsl');
-var fragmentShaderBlit = require('./fragment-shader-blit.glsl');
+var fs = require('fs');
+var path = require('path');
+/* eslint-disable max-len */
+var vertexShaderBlit = fs.readFileSync(path.join(__dirname, './vertex-shader-blit.glsl'), 'utf-8');
+var fragmentShaderBlit = fs.readFileSync(path.join(__dirname, './fragment-shader-blit.glsl'), 'utf-8');
+/* eslint-enable max-len */
 var HeatmapTexture = require('./heatmap-texture');
 var HeatmapHeights = require('./heatmap-heights');
 var HeatmapShader = require('./heatmap-shader');
