@@ -1,6 +1,6 @@
 {
   "name": "webgl-heatmap",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A commonJS compatible version of pyalot's webgl-heatmap",
   "main": "index.js",
   "scripts": {
